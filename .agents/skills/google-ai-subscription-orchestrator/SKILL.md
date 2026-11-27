@@ -94,9 +94,19 @@ using their Google AI plan:
        generation to `gemini.google.com` and `aistudio.google.com` via the
        built-in browser.
      - **Google Flow (`flow.google.com`)** *(only if Flow Credits > 0)*: Ask if
-       the user wants to create **images** or **videos**, and offer concrete
-       ideas (e.g., product/app promo videos, hero visuals, storyboards) using
-       their available Flow models and credits.
+       the user wants to create **images** or **videos**, offer concrete ideas
+       (e.g., product/app promo videos, hero visuals, storyboards) using their
+       available Flow models and credits, and give the user **two execution
+       options**:
+       1. **Use Google Flow directly in Antigravity's built-in browser** (zero
+          setup, best for quick one-off images or clips).
+       2. **Install `flow-mcp`** ([`GTAI-1/flow-mcp`](https://github.com/GTAI-1/flow-mcp))
+          — an open-source MCP server that connects Antigravity to Flow via a
+          dedicated Chrome window using your Flow credits (adds multi-scene
+          chaining, character consistency, narration, captions, and FFmpeg
+          assembly; requires Node.js 22+, Chrome, and one-time `npm run login`).
+          See [browser-playbooks.md](./references/browser-playbooks.md) for the
+          setup steps if the user chooses to install it.
      - **Gemini Notebook (`notebook.google.com`)** *(if quota available)*: Give
        actionable ideas based on their unlocked Studio tools (e.g., generating
        an **Audio Overview**, **Video Overview**, **Slide deck**, **Mind Map**,
@@ -129,10 +139,11 @@ best fits and where quota is available:
 
 1. **Read [browser-playbooks.md](./references/browser-playbooks.md)** for the
    surface-specific `browser` subagent prompt template and completion criteria.
-2. **Launch or reuse a `browser` subagent** for each target surface with a
-   clear, verifiable completion condition (e.g., *"Generate the asset, download
-   it, and report the downloaded file path"*, or *"Run the prompt in AI Studio
-   and return the full response text / exported code"*).
+2. **Launch or reuse a `browser` subagent** (or use `flow-mcp` MCP tools if
+   the user installed `GTAI-1/flow-mcp` for Flow) for each target surface with
+   a clear, verifiable completion condition (e.g., *"Generate the asset,
+   download it, and report the downloaded file path"*, or *"Run the prompt in AI
+   Studio and return the full response text / exported code"*).
 3. **Bridge outputs back into Antigravity**:
    - Copy or move downloaded media (videos, images, audio) or exported files
      from the browser download location into the active workspace.

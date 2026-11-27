@@ -13,7 +13,7 @@ Turn Antigravity into a central orchestrator for your **Google AI subscription**
    - **Google One** (`one.google.com/benefits`, `settings`, `storage`)
    - **Gemini Web** (`gemini.google.com` — models, Deep Research, Canvas, Gems)
    - **Google AI Studio** (`aistudio.google.com` — Playground, Build, API keys & monthly Cloud/Developer Program credits)
-   - **Google Flow** (`labs.google/fx/tools/flow` — monthly Flow Credits, Veo video/image/audio tools)
+   - **Google Flow** (`flow.google.com` — monthly Flow Credits, Veo video/image/audio tools; optionally integrates with [`GTAI-1/flow-mcp`](https://github.com/GTAI-1/flow-mcp) if you want dedicated MCP tools for multi-scene video workflows)
    - **NotebookLM** (`notebooklm.google.com` — Pro/Plus limits, Audio Overviews)
    - **Google Colab** (`colab.research.google.com` — compute units & GPU access)
 2. **Routes and executes tasks** across those surfaces using browser automation controlled by your Antigravity model (e.g., Gemini 4 Hydrogen), bringing generated assets, code, and research back into your local workspace.

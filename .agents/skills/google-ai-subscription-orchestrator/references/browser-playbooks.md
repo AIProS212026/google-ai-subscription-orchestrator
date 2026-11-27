@@ -64,6 +64,40 @@ Best for: Video generation (Veo), scene/storyboard creation, image/audio assets.
   3. Wait for rendering to complete, download the resulting `.mp4` / `.png` / audio file, and report the downloaded filename and updated Flow Credits balance.
 - Once downloaded, move or copy the file into the user's workspace and link it.
 
+### 4b. Optional: Installing `flow-mcp` (`https://github.com/GTAI-1/flow-mcp`)
+
+If the user chooses to install `flow-mcp` instead of (or alongside) using the
+built-in browser for Google Flow:
+
+1. **Prerequisites**: Node.js 22+, Google Chrome, and (optionally) FFmpeg /
+   `whisper.cpp` for assembly and captions.
+2. **Clone & build** *(avoid OneDrive-synced folders on Windows like Desktop/Documents, and avoid `~/Desktop`, `~/Documents`, `~/Downloads` on macOS)*:
+   ```bash
+   git clone https://github.com/GTAI-1/flow-mcp.git
+   cd flow-mcp
+   npm install
+   npm run build
+   ```
+3. **One-time sign-in**:
+   ```bash
+   npm run login
+   ```
+   Sign into Google in the dedicated Chrome window, open a Flow project, and
+   leave the window open while using `flow-mcp`.
+4. **Connect to Antigravity**: Add `flow` to `mcp_config.json` (in Antigravity:
+   **…** menu → **Manage MCP Servers** → **View raw config**):
+   ```json
+   {
+     "mcpServers": {
+       "flow": {
+         "command": "node",
+         "args": ["/absolute/path/to/flow-mcp/dist/index.js"]
+       }
+     }
+   }
+   ```
+   *(On Windows, use doubled backslashes like `"C:\\Users\\<you>\\flow-mcp\\dist\\index.js"`.)*
+
 ---
 
 ## 5. Gemini Notebook / NotebookLM Playbook (`notebook.google.com`)
