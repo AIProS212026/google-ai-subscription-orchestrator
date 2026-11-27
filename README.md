@@ -65,11 +65,35 @@ This skill is intended for **personal, human-paced, single-account orchestration
 
 ---
 
+## Example Output (Live Subscription Scan)
+
+Here is what Antigravity produces when scanning a Google AI Pro subscription across all surfaces:
+
+### 1. Google One Plan & Included Perks
+![Google One Subscription Scan](./assets/screenshots/01-google-one-scan.png)
+
+### 2. Gemini Web & Google AI Studio
+![Gemini Web and Google AI Studio Quotas](./assets/screenshots/02-gemini-and-ai-studio.png)
+
+### 3. Google Flow, Gemini Notebook & Google Colab
+![Google Flow, Gemini Notebook, and Colab Quotas](./assets/screenshots/03-flow-notebook-colab.png)
+
+### 4. Untapped / Ready-to-Use Quotas Summary
+![Untapped Quotas Summary](./assets/screenshots/04-untapped-quotas-summary.png)
+
+---
+
 ## Repository Structure
 
 ```text
 .
 ├── README.md
+├── assets/
+│   └── screenshots/
+│       ├── 01-google-one-scan.png
+│       ├── 02-gemini-and-ai-studio.png
+│       ├── 03-flow-notebook-colab.png
+│       └── 04-untapped-quotas-summary.png
 └── .agents/
     └── skills/
         └── google-ai-subscription-orchestrator/
