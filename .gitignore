@@ -1,0 +1,8 @@
+# Local helper scripts (not for GitHub)
+*.bat
+*.cmd
+
+# OS & editor files
+.DS_Store
+Thumbs.db
+desktop.ini
